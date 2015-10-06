@@ -1,116 +1,118 @@
 <html>
+<head>
+  <title>Internship Search 2016</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['sankey']}]}"></script>
+</head>
 <body>
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['sankey']}]}"></script>
+  <a href="https://github.com/jacobnisnevich/internships-2016"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
 
-<a href="https://github.com/jacobnisnevich/internships-2016"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+  <div style="font-family: 'Roboto'; font-weight: 300; font-size: 48px; text-align: center; margin: 30px 0;">Internship Search 2016</div>
 
-<div style="font-family: 'Roboto'; font-weight: 300; font-size: 48px; text-align: center; margin: 30px 0;">Internship Search 2016</div>
+  <div style="width: 100%; height: 100%">
+    <div id="internships-sankey" style="width: 1200px; height: 675px; margin: auto; display: table-cell; position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
+  </div>
 
-<div style="width: 100%; height: 100%">
-  <div id="internships-sankey" style="width: 1200px; height: 675px; margin: auto; display: table-cell; position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
-</div>
+  <script type="text/javascript">
+  google.setOnLoadCallback(drawChart);
+     function drawChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'From');
+      data.addColumn('string', 'To');
+      data.addColumn('number', 'Weight');
+      data.addRows([
+        ['9/23/2015', 'Vulcun', 1],
+        ['9/23/2015', 'RAVEL', 1],
+        ['9/23/2015', 'Cintric', 1],
+        ['9/23/2015', 'Polarr', 1],
+        ['9/23/2015', 'MonJa', 1],
+        ['9/23/2015', 'Facebook', 1],
+        ['9/23/2015', 'Workday', 1],
+        ['9/24/2015', 'EA', 1],
+        ['9/24/2015', 'Hulu', 1],
+        ['9/24/2015', 'Oracle', 1],
+        ['9/24/2015', 'SimInsights', 1],
+        ['9/24/2015', 'Microsoft', 1],
+        ['9/24/2015', 'Toyota', 1],
+        ['9/24/2015', 'Redwave Software', 1],
+        ['9/24/2015', 'WealthFront', 1],
+        ['9/24/2015', 'LogRhythm', 1],
+        ['9/28/2015', 'Yelp', 1],
+        ['9/28/2015', 'Intel', 1],
+        ['9/28/2015', 'Palantir', 1],
+        ['9/28/2015', 'Square', 1],
+        ['9/28/2015', 'Quora', 1],
+        ['9/28/2015', 'Pinterest' , 1],
+        ['9/28/2015', 'Stripe', 1],
+        ['9/28/2015', 'Twitter', 1],
+        ['9/28/2015', 'Uber', 1],
+        ['9/28/2015', 'Xperiel', 1],
+        ['9/28/2015', 'GetOnDemand', 1],
+        ['10/1/2015', 'Khan Academy', 1],
+        ['10/1/2015', 'Gusto', 1],
+        ['10/1/2015', 'Apple', 1],
+        ['10/1/2015', 'Apple', 1],
+        ['10/1/2015', 'Apple', 1],
+        ['10/1/2015', 'Apple', 1],
+        ['10/1/2015', 'Apple', 1],
+        ['10/1/2015', 'Qualcomm', 1],
+        ['10/1/2015', 'Infinity Ward', 1],
+        ['10/1/2015', 'GitHub', 1],
+        ['9/28/2015', 'Dropbox', 1],
+        ['10/2/2015', 'Pandora', 1],
+        ['10/5/2016', 'Liveramp', 1],
 
-<script type="text/javascript">
-google.setOnLoadCallback(drawChart);
-   function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'From');
-    data.addColumn('string', 'To');
-    data.addColumn('number', 'Weight');
-    data.addRows([
-      ['9/23/2015', 'Vulcun', 1],
-      ['9/23/2015', 'RAVEL', 1],
-      ['9/23/2015', 'Cintric', 1],
-      ['9/23/2015', 'Polarr', 1],
-      ['9/23/2015', 'MonJa', 1],
-      ['9/23/2015', 'Facebook', 1],
-      ['9/23/2015', 'Workday', 1],
-      ['9/24/2015', 'EA', 1],
-      ['9/24/2015', 'Hulu', 1],
-      ['9/24/2015', 'Oracle', 1],
-      ['9/24/2015', 'SimInsights', 1],
-      ['9/24/2015', 'Microsoft', 1],
-      ['9/24/2015', 'Toyota', 1],
-      ['9/24/2015', 'Redwave Software', 1],
-      ['9/24/2015', 'WealthFront', 1],
-      ['9/24/2015', 'LogRhythm', 1],
-      ['9/28/2015', 'Yelp', 1],
-      ['9/28/2015', 'Intel', 1],
-      ['9/28/2015', 'Palantir', 1],
-      ['9/28/2015', 'Square', 1],
-      ['9/28/2015', 'Quora', 1],
-      ['9/28/2015', 'Pinterest' , 1],
-      ['9/28/2015', 'Stripe', 1],
-      ['9/28/2015', 'Twitter', 1],
-      ['9/28/2015', 'Uber', 1],
-      ['9/28/2015', 'Xperiel', 1],
-      ['9/28/2015', 'GetOnDemand', 1],
-      ['10/1/2015', 'Khan Academy', 1],
-      ['10/1/2015', 'Gusto', 1],
-      ['10/1/2015', 'Apple', 1],
-      ['10/1/2015', 'Apple', 1],
-      ['10/1/2015', 'Apple', 1],
-      ['10/1/2015', 'Apple', 1],
-      ['10/1/2015', 'Apple', 1],
-      ['10/1/2015', 'Qualcomm', 1],
-      ['10/1/2015', 'Infinity Ward', 1],
-      ['10/1/2015', 'GitHub', 1],
-      ['9/28/2015', 'Dropbox', 1],
-      ['10/2/2015', 'Pandora', 1],
-      ['10/5/2016', 'Liveramp', 1],
+        ['Vulcun', 'Response Pending', 1],
+        ['RAVEL', 'Response Pending', 1],
+        ['Cintric', 'Email Conversation', 1],
+        ['Polarr', 'Response Pending', 1],
+        ['MonJa', 'Response Pending', 1],
+        ['Facebook', 'Response Pending', 1],
+        ['Workday', 'Response Pending', 1],
+        ['EA', 'Response Pending', 1],
+        ['Hulu', 'Response Pending', 1],
+        ['Oracle', 'Response Pending', 1],
+        ['SimInsights', 'Email Conversation', 1],
+        ['Microsoft', 'Response Pending', 1],
+        ['Toyota', 'Response Pending', 1],
+        ['Redwave Software', 'Response Pending', 1],
+        ['WealthFront', 'Response Pending', 1],
+        ['LogRhythm', 'Response Pending', 1],
+        ['Yelp', 'Response Pending', 1],
+        ['Intel', 'Response Pending', 1],
+        ['Palantir', 'Response Pending', 1],
+        ['Square', 'Rejected', 1],
+        ['Quora', 'Rejected', 1],
+        ['Pinterest' , 'Response Pending', 1],
+        ['Stripe', 'Rejected', 1],
+        ['Twitter', 'Rejected', 1],
+        ['Uber', 'Rejected', 1],
+        ['Xperiel', 'Response Pending', 1],
+        ['GetOnDemand', 'Response Pending', 1],
+        ['Khan Academy', 'Response Pending', 1],
+        ['Gusto', 'Response Pending', 1],
+        ['Apple', 'Response Pending', 1],
+        ['Apple', 'Response Pending', 1],
+        ['Apple', 'Response Pending', 1],
+        ['Apple', 'Response Pending', 1],
+        ['Apple', 'Response Pending', 1],
+        ['Qualcomm', 'Response Pending', 1],
+        ['Infinity Ward', 'Response Pending', 1],
+        ['GitHub', 'Response Pending', 1],
+        ['Dropbox', 'Response Pending', 1],
+        ['Pandora', 'Response Pending', 1],
+        ['Liveramp', 'Response Pending', 1]
 
-      ['Vulcun', 'Response Pending', 1],
-      ['RAVEL', 'Response Pending', 1],
-      ['Cintric', 'Email Conversation', 1],
-      ['Polarr', 'Response Pending', 1],
-      ['MonJa', 'Response Pending', 1],
-      ['Facebook', 'Response Pending', 1],
-      ['Workday', 'Response Pending', 1],
-      ['EA', 'Response Pending', 1],
-      ['Hulu', 'Response Pending', 1],
-      ['Oracle', 'Response Pending', 1],
-      ['SimInsights', 'Email Conversation', 1],
-      ['Microsoft', 'Response Pending', 1],
-      ['Toyota', 'Response Pending', 1],
-      ['Redwave Software', 'Response Pending', 1],
-      ['WealthFront', 'Response Pending', 1],
-      ['LogRhythm', 'Response Pending', 1],
-      ['Yelp', 'Response Pending', 1],
-      ['Intel', 'Response Pending', 1],
-      ['Palantir', 'Response Pending', 1],
-      ['Square', 'Rejected', 1],
-      ['Quora', 'Rejected', 1],
-      ['Pinterest' , 'Response Pending', 1],
-      ['Stripe', 'Rejected', 1],
-      ['Twitter', 'Rejected', 1],
-      ['Uber', 'Rejected', 1],
-      ['Xperiel', 'Response Pending', 1],
-      ['GetOnDemand', 'Response Pending', 1],
-      ['Khan Academy', 'Response Pending', 1],
-      ['Gusto', 'Response Pending', 1],
-      ['Apple', 'Response Pending', 1],
-      ['Apple', 'Response Pending', 1],
-      ['Apple', 'Response Pending', 1],
-      ['Apple', 'Response Pending', 1],
-      ['Apple', 'Response Pending', 1],
-      ['Qualcomm', 'Response Pending', 1],
-      ['Infinity Ward', 'Response Pending', 1],
-      ['GitHub', 'Response Pending', 1],
-      ['Dropbox', 'Response Pending', 1],
-      ['Pandora', 'Response Pending', 1],
-      ['Liveramp', 'Response Pending', 1]
-      
-    ]);
+      ]);
 
-    var options = {
-      width: 1200,
-    };
+      var options = {
+        width: 1200,
+      };
 
-    // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.Sankey(document.getElementById('internships-sankey'));
-    chart.draw(data, options);
-   }
-</script>
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.Sankey(document.getElementById('internships-sankey'));
+      chart.draw(data, options);
+     }
+  </script>
 </body>
 </html>
